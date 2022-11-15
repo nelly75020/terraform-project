@@ -5,6 +5,18 @@
 *.tfstate
 *.tfstate.*
 
-# tf variable files may include sensitive data
+# Ignore .tfvars files as they may include sensitive data such as
+# password, private keys, and other secrets. These should not be part
+# of VCS as they are data points which are potentially sensitive and
+# subject to changes depending on the environment.
 *.tfvars
 
+# Ignore CLI configuration files
+.terraformrc
+terraformrc
+
+# Ignore Mac/OSX system file, with the folder metadata
+.DS_Store
+
+# Ignore crash logs
+crash.log
